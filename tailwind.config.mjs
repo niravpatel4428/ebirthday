@@ -8,8 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        blue: "#05123C",
+        sky: "#0494B8",
+        orange: "#ED6F4D",
+      },
+      fontFamily: {
+        onest: ["Onest", "serif"],
+        outfit: ["Outfit", "serif"],
+        fredoka: ["Fredoka", "serif"],
+      },
+      boxShadow: {
+        faq: "0px 4px 114px 0px rgba(0, 48, 73, 0.06)",
+        input: "0px 3.124px 73.404px 0px rgba(0, 0, 0, 0.06)",
       },
     },
   },
