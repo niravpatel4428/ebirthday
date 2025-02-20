@@ -3,14 +3,17 @@ import "./globals.css";
 
 const onest = Onest({
   variable: "--font-onest",
+  subsets: ['latin'],
 });
 
 const fredoka = Fredoka({
   variable: "--font-fredoka",
+  subsets: ['latin'],
 });
 
 const outfit = Outfit({
   variable: "--font-outfit",
+  subsets: ['latin'],
 });
 
 export const metadata = {
