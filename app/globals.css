@@ -58,17 +58,20 @@ body {
 
 /* Banner Slider */
 
+.rfm-marquee > *:nth-child(even) {margin-top: 90px !important;}
 .rfm-initial-child-container > *:nth-child(even) {margin-top: 90px !important;}
 .rfm-initial-child-container {align-items: flex-start !important;}
 
 
 @media (max-width:1199px) {
   .rfm-initial-child-container > *:nth-child(even) {margin-top: 64px !important;}
+  .rfm-marquee > *:nth-child(even) {margin-top: 64px !important;}
 }
 
 @media (max-width:767px) {
   .slider-container .slick-track {gap: 14px;}
   .rfm-initial-child-container > *:nth-child(even) {margin-top: 44px !important;}
+  .rfm-marquee > *:nth-child(even) {margin-top: 44px !important;}
 }
 
 
