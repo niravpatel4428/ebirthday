@@ -46,7 +46,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="relative pt-[30px] lg:pt-[60px] pb-[122px]">
+    <section className="relative pt-[30px] lg:pt-[60px] pb-[212px]">
       <div className="container !max-w-[1012px]">
         <div className="text-center">
           <p className="text-orange font-onest text-sm leading-[178.571%] font-semibold">

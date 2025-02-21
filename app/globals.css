@@ -40,12 +40,13 @@ body {
 
 /* Testimonials Slider */
 
-.slick-prev:before,
+.slider-container .slick-prev:before,
 .slick-next:before { display: none; }
 
-.slick-track { display: flex; flex-direction: row; gap: 28px;height: auto; padding-top: 10px !important;padding-bottom: 10px !important;}
-.slick-slide  {display: flex !important; height: inherit;}
-.slick-slide > div {  height: 100%; }
+.slider-container .slick-track { display: flex; flex-direction: row; gap: 28px;height: auto; padding-top: 10px !important;padding-bottom: 10px !important;}
+.slider-container .slick-slide  {display: flex !important; height: inherit;}
+.slider-container .slick-slide > div {  height: 100%; }
+
 
 .slick-slide.slick-center { @apply bg-orange rounded-[15px] -my-[10px] transition-all duration-500}
 .slick-slide.slick-center .slick-inner { @apply bg-transparent rounded-none border-none scale-y-[10px] }
@@ -66,7 +67,7 @@ body {
 }
 
 @media (max-width:767px) {
-  .slick-track {gap: 14px;}
+  .slider-container .slick-track {gap: 14px;}
   .rfm-initial-child-container > *:nth-child(even) {margin-top: 44px !important;}
 }
 

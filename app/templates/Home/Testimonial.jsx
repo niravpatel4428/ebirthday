@@ -34,7 +34,7 @@ const Testimonial = () => {
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow:1,
+          slidesToShow: 1,
           centerPadding: "300px",
         },
       },
@@ -71,26 +71,27 @@ const Testimonial = () => {
         breakpoint: 429,
         settings: {
           slidesToShow: 1,
-          centerPadding: "20px",
+          centerPadding: "0px",
         },
       },
     ],
   };
   return (
-    <div className="relative pb-[10px] lg:pb-[60px]">
-      {/* <div className="absolute top-[-53px] left-0 right-0">
+    <div className="relative pt-9 md:pt-2 pb-[10px] lg:pb-[60px]">
+      <div className="absolute -top-4 md:top-[-53px] left-0 right-0">
         <Image src={whiteShape} alt="shape" className="w-full" />
-      </div> */}
+      </div>
+
       <div className="relative z-10 text-center mb-[34px] lg:mb-[60px]">
         <p className="text-orange text-sm uppercase font-onest leading-[178.571%] font-semibold mb-[6px]">
           Testimonials
         </p>
-        <h4 className="text-blue text-[32px] md:text-4xl lg:text-[42px] xl:text-[45px] font-fredoka font-semibold">
+        <h4 className="text-blue text-[32px] md:text-4xl lg:text-[42px] xl:text-[45px] font-fredoka font-semibold !leading-tight">
           How we help people <br /> celebrate
         </h4>
       </div>
 
-      <div className="slider-container relative z-10 mb-24 overflow-hidden">
+      <div className="slider-container relative z-10 pb-24 overflow-hidden">
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <div
