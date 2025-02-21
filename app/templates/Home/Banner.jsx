@@ -18,7 +18,7 @@ import bgm from "@/public/img/banner-bg-mobile.svg";
 import Link from "next/link";
 const Banner = () => {
   return (
-    <div className="relative text-center pt-20 pb-[46px] md:pb-[110px]">
+    <div id="home" className="relative text-center pt-20 pb-[46px] md:pb-[110px]">
       <div className="absolute left-0 right-0 bottom-0 w-full h-fit">
         <Image src={bg} alt="image" className="w-full h-[184px] md:h-fit md:min-h-52 object-cover hidden md:block" />
         <Image src={bgm} alt="image" className="w-full h-[184px] md:h-fit md:min-h-52 object-cover block md:hidden" />

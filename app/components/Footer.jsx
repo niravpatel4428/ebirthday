@@ -5,7 +5,7 @@ import footervector from "@/public/img/footervector.svg";
 import footervectormobile from "@/public/img/footervectormobile.svg";
 const Footer = () => {
   return (
-    <footer className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
+    <footer  className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
       <div className="absolute -top-10 md:-top-20 left-0 right-0 w-full">
         <Image
           src={footervector}
@@ -18,7 +18,7 @@ const Footer = () => {
           className="w-full block md:hidden"
         />
       </div>
-      <div className="container">
+      <div id="contact" className="container">
         <div className="relative z-10">
           <div className="grid grid-cols-12 pb-10 border-b border-white/10">
             <div className="col-span-full lg:col-span-4 xl:col-span-4">

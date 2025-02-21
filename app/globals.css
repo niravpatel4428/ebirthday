@@ -20,6 +20,10 @@
   /* font-family: "Onest", "serif"; */
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--blue);
   background: var(--white);

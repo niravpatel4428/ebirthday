@@ -5,12 +5,38 @@ import Image from "next/image";
 import headerLogo from "@/public/img/headerLogo.png";
 // import footervector from "@/public/img/footervector.svg";
 
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "FAQs", href: "#faqs" },
+  { name: "Contact Us", href: "#contact" },
+];
+const navLinksMobile = [
+  { name: "Home", href: "#home" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "FAQs", href: "#faqs" },
+  { name: "Contact Us", href: "#contact" },
+];
+
 const Header = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-
+  const [isSticky, setIsSticky] = useState(false);
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   useEffect(() => {
     if (isCollapsed) {
       document.body.classList.add("overflow-hidden");
@@ -18,12 +44,15 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [isCollapsed]);
+
   return (
-    <header className="border-b border-[#05123c1a] relative">
+    <header
+      className={`border-b border-[#05123c1a] sticky top-0 z-50 bg-white ${ isSticky ? "!sticky top-0 shadow-md" : "" } transition-all duration-500`}
+    >
       <div className="container">
         <div className="flex justify-between items-center w-full h-[60px] md:h-20">
           {/* logo */}
-          <div className="w-[62px] h-[58px] md:w-[90px] md:h-20  z-[99] absolute top-0 left-1/2 -translate-x-1/2">
+          <div className="w-[65px] h-[58px] md:w-[90px] md:h-20  z-[99] absolute top-0 left-1/2 -translate-x-1/2">
             <Link href="/" target="_blank">
               <Image
                 src={headerLogo}
@@ -38,38 +67,16 @@ const Header = () => {
           {/* big screen links */}
           <div className={`hidden lg:block`}>
             <ul className="flex flex-row items-center gap-5 xl:gap-6">
-              <li>
-                <Link
-                  href="/"
-                  className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                >
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                >
-                  Contact Us
-                </Link>
-              </li>
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -77,13 +84,13 @@ const Header = () => {
           <div className="hidden lg:flex gap-4">
             <Link
               href="/"
-              className="text-black text-base font-normal font-outfit p-[10px_30px] xl:p-[14px_30px] rounded-xl border border-[#1e1e1e80] bg-transparent hover:bg-[#1e1e1e] hover:text-white transition-all duration-500"
+              className="text-black text-base font-normal font-outfit p-[10px_30px] xl:p-[11px_30px] rounded-xl border border-[#1e1e1e80] bg-transparent hover:bg-[#1e1e1e] hover:text-white transition-all duration-500"
             >
               Sign up
             </Link>
             <Link
               href="/"
-              className="text-white text-base font-normal font-outfit p-[10px_34px] xl:p-[14px_34px] rounded-xl border border-transparent bg-orange hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
+              className="text-white text-base font-normal font-outfit p-[10px_34px] xl:p-[11px_34px] rounded-xl border border-transparent bg-orange hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
             >
               Sign in
             </Link>
@@ -129,50 +136,20 @@ const Header = () => {
           >
             <div className="h-full w-full flex justify-center">
               <ul className="flex flex-col items-center justify-center gap-5 overflow-y-auto pt-32">
-                <li>
-                  <Link
-                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                    href="/"
-                    onClick={() => {
-                      setIsCollapsed(!isCollapsed);
-                    }}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                    href="/"
-                    onClick={() => {
-                      setIsCollapsed(!isCollapsed);
-                    }}
-                  >
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                    href="/"
-                    onClick={() => {
-                      setIsCollapsed(!isCollapsed);
-                    }}
-                  >
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
-                    href="/"
-                    onClick={() => {
-                      setIsCollapsed(!isCollapsed);
-                    }}
-                  >
-                    Contact Us
-                  </Link>
-                </li>
+                {navLinksMobile.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
+                      href={link.href}
+                      onClick={() => {
+                        setIsCollapsed(!isCollapsed);
+                      }}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+
                 <li className="mt-3 mb-3">
                   <Link
                     href="/"
