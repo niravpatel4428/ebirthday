@@ -1,5 +1,9 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+import bg from "@/public/img/price-bg.svg";
+import bgm from "@/public/img/price-bg-mobile.svg";
+
 const Pricing = () => {
   const [currentPlan, setCurrentPlan] = useState(plans.annual);
   const handlePlanToggle = (planType) => {
@@ -20,14 +24,18 @@ const Pricing = () => {
     }
   };
   return (
-    <div className="relative bg-[#CBE8F0] pb-[35px] md:pb-[153px]">
+    <div className="relative bg-[#CBE8F0] pt-[60px] pb-[35px] md:pb-[153px]">
+      <div className="absolute -top-5 md:-top-9 left-0 right-0">
+      <Image src={bg} alt="image" className="w-full h-full object-cover hidden min-h-52 md:block" />
+      <Image src={bgm} alt="image" className="w-full h-full  object-cover block md:hidden" />
+      </div>
       <div className="container">
         <div className="relative z-10">
           <div className="text-center mb-[50px] md:mb-[62px]">
-            <h3 className="text-blue text-[32px] md:text-4xl lg:text-[42px] xl:text-[45px] font-fredoka font-semibold">
+            <h3 className="text-blue text-[32px] md:text-4xl lg:text-[42px] xl:text-[45px] font-fredoka font-semibold mb-[13px]">
               Simple Pricing
             </h3>
-            <p className="text-blue font-onest text-base font-bold leading-[168.75% ]">
+            <p className="text-blue font-onest text-[15px] md:text-base font-normal leading-[168.75%]  max-md:w-[80%]  mx-auto">
               Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
           </div>

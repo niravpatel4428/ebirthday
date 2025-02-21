@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Faq from "./templates/Home/Faq";
 import Testimonial from "./templates/Home/Testimonial";
 import Celebrate from "./templates/Home/Celebrate";
-import Pricing from "./templates/Pricing";
+import Pricing from "./templates/Home/Pricing";
 import Steps from "./templates/Home/Steps";
 import Banner from "./templates/Home/Banner";
 
