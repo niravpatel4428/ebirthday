@@ -61,6 +61,7 @@ body {
 .rfm-marquee > *:nth-child(even) {margin-top: 90px !important;}
 .rfm-initial-child-container > *:nth-child(even) {margin-top: 90px !important;}
 .rfm-initial-child-container {align-items: flex-start !important;}
+.rfm-marquee {align-items: flex-start !important;}
 
 
 @media (max-width:1199px) {
