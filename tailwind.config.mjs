@@ -11,6 +11,7 @@ export default {
         blue: "#05123C",
         sky: "#0494B8",
         orange: "#ED6F4D",
+        slate: "#E2E8F0",
       },
       fontFamily: {
         onest: ["Onest", "serif"],
