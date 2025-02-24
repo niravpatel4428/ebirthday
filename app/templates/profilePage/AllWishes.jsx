@@ -2,6 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import plus from "@/public/img/plus.svg";
+import noti from "@/public/img/noti.svg";
+import animae from "@/public/img/animae.jpg";
 import search from "@/public/img/search.svg";
 import more from "@/public/img/more.svg";
 import checked from "@/public/img/checked.svg";
@@ -31,8 +34,41 @@ const AllWishes = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="border border-[#E2E8F0] rounded-[10px]">
+    <>
+      {/* header */}
+      <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t  border-[#E2E8F0] flex items-center justify-between">
+        <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
+          Birthday Wishes
+        </p>
+        <div className="flex flex-row gap-[13px]">
+          <Link
+            href="/"
+            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+          >
+            <Image
+              src={plus}
+              alt="icon"
+              className="object-contain size-[18px] md:size-6"
+            />
+            Create New Wish
+          </Link>
+          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <Image
+              src={noti}
+              alt="icon"
+              className="object-contain size-[22px] rounded-full"
+            />
+          </div>
+          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <Image
+              src={animae}
+              alt="icon"
+              className="object-contain size-fit md:size-[44px] rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="border border-[#E2E8F0] md:rounded-[10px]">
         {/* Search part */}
         <div className="p-[22px_16px] md:p-[25px_23px] flex items-center justify-between">
           <div>
@@ -44,7 +80,7 @@ const AllWishes = () => {
               <span className="font-bold text-black">345</span> wishes
             </p>
           </div>
-          <div className="w-full max-w-[380px] relative">
+          <div className="w-full max-w-[380px] relative max-md:hidden">
             <input
               type="search"
               name="search"
@@ -57,6 +93,9 @@ const AllWishes = () => {
               alt="img"
               className="size-5 absolute top-1/2 -translate-y-1/2 left-4"
             />
+          </div>
+          <div className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex md:hidden justify-center items-center">
+            <Image src={search} alt="icon" className="size-5" />
           </div>
         </div>
         {/* table part */}
@@ -156,7 +195,10 @@ const AllWishes = () => {
             </thead>
             <tbody>
               {wishes.map((wish, index) => (
-                <tr key={index} className="border-t text-gray-700 text-sm pt-2 last:border-b last:border-[#E2E8F0]">
+                <tr
+                  key={index}
+                  className="border-t text-gray-700 text-sm pt-2 last:border-b last:border-[#E2E8F0]"
+                >
                   <td className="p-[18px_8px] border-r border-[#E2E8F0] text-center">
                     <label className="flex items-center cursor-pointer h-[22px] w-[22px] overflow-hidden relative mx-auto">
                       <input
@@ -170,7 +212,7 @@ const AllWishes = () => {
                       </span>
                     </label>
                   </td>
-                  <td className="p-[18px_8px] border-r border-[#E2E8F0] text-[#1E293B] text-sm font-onest font-normal">
+                  <td className="p-[18px_8px] border-r border-[#E2E8F0] text-[#1E293B] text-sm font-onest font-normal line-clamp-1">
                     {wish.name}
                   </td>
                   <td className="p-[18px_8px] border-r border-[#E2E8F0] text-center">
@@ -203,7 +245,7 @@ const AllWishes = () => {
         </div>
         <Pagination />
       </div>
-    </div>
+    </>
   );
 };
 

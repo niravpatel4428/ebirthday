@@ -11,14 +11,16 @@ import cancle from "@/public/img/mail-cancle-red.png";
 import cross from "@/public/img/cross.svg";
 import connect from "@/public/img/connect.svg";
 import logo from "@/public/img/mobile-center.png";
-const MainProfile = () => {
+const NotVarified = () => {
   return (
-    <div className="relative md:rounded-[15px] border border-salte">
-      <div className="flex justify-between md:hidden">
+    <div>
+    {/* <div className="relative md:rounded-[15px] border border-salte"> */}
+      {/* Header */}
+      <div className="flex justify-between md:hidden py-2">
         <div className="w-[65px] h-[58px]">
           <Image src={logo} alt="img" className="object-contain" />
         </div>
-        <div className="flex flex-row gap-[7px]">
+        <div className="flex flex-row items-center gap-[7px]">
           <div className="size-10 md:size-[49px] rounded-full border border-slate flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
@@ -35,8 +37,9 @@ const MainProfile = () => {
           </div>
         </div>
       </div>
+
       <div>
-        <div className="p-[24px_16px_19px] md:p-[20px] flex items-center justify-between">
+        <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-y border-[#E2E8F0] flex items-center justify-between">
           <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
             My Profile
           </p>
@@ -63,24 +66,6 @@ const MainProfile = () => {
               />
             </div>
           </div>
-        </div>
-        <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
-          <div className="flex flex-row items-center gap-[13px] ">
-            <Image src={success} alt="icon" className="object-contain size-8" />
-            <div>
-              <p className="text-black text-sm font-semibold !leading-tight">
-                Email has been verified
-              </p>
-              <span className="text-black/80 text-xs font-normal !leading-tight">
-                Your account is now unlocked to create wishes
-              </span>
-            </div>
-          </div>
-          <Image
-            src={cross}
-            alt="icon"
-            className="object-contain size-[18px] cursor-pointer"
-          />
         </div>
         <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
           <div className="flex flex-row items-center gap-[13px] ">
@@ -143,8 +128,8 @@ const MainProfile = () => {
               </label>
               <input
                 type="text"
-                plceholder=""
-                className="text-[#64748B] text-base font-normal font-onest rounded-[10px] bg-white p-[17px_20px] md:p-[18px_25px] border border-[#E2E8F0] outline-none"
+                plceholder="Usman Zafar"
+                className="text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
             <div className="flex flex-col gap-2 date-main">
@@ -157,7 +142,7 @@ const MainProfile = () => {
               <input
                 type="date"
                 plceholder=""
-                className="text-[#64748B] text-base font-normal font-onest rounded-[10px] bg-white p-[17px_20px] md:p-[18px_25px] border border-[#E2E8F0] outline-none"
+                className="text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -169,8 +154,8 @@ const MainProfile = () => {
               </label>
               <input
                 type="email"
-                plceholder=""
-                className="text-[#64748B] text-base font-normal font-onest rounded-[10px] bg-white p-[17px_20px] md:p-[18px_25px] border border-[#E2E8F0] outline-none"
+                plceholder="demo@gmail.com"
+                className="text-[#64748B] placeholder:text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
           </form>
@@ -202,7 +187,6 @@ const MainProfile = () => {
             </div>
           </div>
         </div>
-
         <div className="relative border-y border-[#E2E8F0] p-[25px_16px_44px] md:p-[35px_30px]">
           <h4 className="font-onest font-semibold text-[#64748B] text-sm uppercase !leading-none mb-5">
             Delete this account
@@ -219,4 +203,4 @@ const MainProfile = () => {
   );
 };
 
-export default MainProfile;
+export default NotVarified;
