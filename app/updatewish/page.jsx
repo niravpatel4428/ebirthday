@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import usergroup from "@/public/img/usergroup.svg";
-import shield from "@/public/img/shield.svg";
-import checkOrange from "@/public/img/checkOrange.svg";
-import search from "@/public/img/search.svg";
-import card from "@/public/img/card-birthday.jpg";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import usergroup from "../../public/img/usergroup.svg";
+import shield from "../../public/img/shield.svg";
+import checkOrange from "../../public/img/checkOrange.svg";
+import search from "../../public/img/search.svg";
+import card from "../../public/img/card-birthday.jpg";
 import Link from "next/link";
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 const UpdateWish = () => {
   const [selected, setSelected] = useState("public");
@@ -22,7 +23,7 @@ const UpdateWish = () => {
   ];
 
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <ul className="flex flex-row gap-7">
@@ -240,16 +241,20 @@ const UpdateWish = () => {
 
           {/* buttons */}
           <div className="flex flex-row flex-wrap-reverse justify-end gap-[14px]">
+            <Link href="/wish">
             <button className="p-[13px_37px] rounded-[50px] bg-[#E2E8F0] hover:bg-[#e2e8f0aa] text-black text-base font-normal transition-all max-md:w-full max-md:max-w-[127px] w-fit">
               Cancel
             </button>
+            </Link>
+            <Link href="/updatewish">
             <button className="p-[13px_37px] bg-orange hover:bg-orange/70 rounded-[50px] text-white text-base font-normal transition-all max-md:w-full max-md:max-w-[256px] w-fit">
               Update Wish
             </button>
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 

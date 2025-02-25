@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import headerLogo from "@/public/img/headerLogo.png";
+import headerLogo from "../../public/img/headerLogo.png";
 // import footervector from "@/public/img/footervector.svg";
 
 const navLinks = [

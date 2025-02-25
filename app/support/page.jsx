@@ -2,19 +2,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import mail from "@/public/img/mail-orange.svg";
-import phone from "@/public/img/phone-orange.svg";
-import address from "@/public/img/address-orange.svg";
-import arrow from "@/public/img/select-arrow-down.svg";
-import mailsmall from "@/public/img/mail-small.svg";
-import facebooksmall from "@/public/img/facebook-small.svg";
-import instagram from "@/public/img/instagram.svg";
-import tictok from "@/public/img/tictok.svg";
-import youtube from "@/public/img/youtube.svg";
-import vpn from "@/public/img/vpn.svg";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import mail from "../../public/img/mail-orange.svg";
+import phone from "../../public/img/phone-orange.svg";
+import address from "../../public/img/address-orange.svg";
+import arrow from "../../public/img/select-arrow-down.svg";
+import mailsmall from "../../public/img/mail-small.svg";
+import facebooksmall from "../../public/img/facebook-small.svg";
+import instagram from "../../public/img/instagram.svg";
+import tictok from "../../public/img/tictok.svg";
+import youtube from "../../public/img/youtube.svg";
+import vpn from "../../public/img/vpn.svg";
 
 const Support = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const Support = () => {
   };
 
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
@@ -64,7 +65,7 @@ const Support = () => {
         </div>
       </div>
       {/* Support */}
-      <div className="relative p-[20px_16px_44px] md:p-5 bg-white border-t lg:border border-[#E2E8F0] lg:rounded-[10px]">
+      <div className="relative p-[20px_16px_44px] md:p-5 bg-white  lg:rounded-[10px]">
         <div className="grid lg:grid-cols-2 gap-[30px] md:gap-5 xl:gap-[163px]">
           <div className="w-full">
             <h6 className="font-onest text-black font-bold text-xl/none mb-5 md:mb-8">
@@ -160,9 +161,9 @@ const Support = () => {
               </button>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full lg:pt-20">
             <div className="flex flex-col gap-[18px]">
-              <div className="rounded-[14px] bg-[#F7F7F9] p-[19px_21px]">
+              <div className="rounded-[14px] bg-[#F7F7F9] p-4 lg:p-[19px_21px]">
                 <div className="flex flex-row gap-3">
                   <div className="bg-white rounded-full flex justify-center items-center size-[51px]">
                     <Image src={mail} alt="icon" className="w-[22px]" />
@@ -180,7 +181,7 @@ const Support = () => {
                   </div>
                 </div>
               </div>
-              <div className="rounded-[14px] bg-[#F7F7F9] p-[19px_21px]">
+              <div className="rounded-[14px] bg-[#F7F7F9] p-4 lg:p-[19px_21px]">
                 <div className="flex flex-row gap-3">
                   <div className="bg-white rounded-full flex justify-center items-center size-[51px]">
                     <Image src={phone} alt="icon" className="w-[22px]" />
@@ -198,7 +199,7 @@ const Support = () => {
                   </div>
                 </div>
               </div>
-              <div className="rounded-[14px] bg-[#F7F7F9] p-[19px_21px]">
+              <div className="rounded-[14px] bg-[#F7F7F9] p-4 lg:p-[19px_21px]">
                 <div className="flex flex-row gap-3">
                   <div className="bg-white rounded-full flex justify-center items-center size-[51px]">
                     <Image src={address} alt="icon" className="w-[22px]" />
@@ -215,33 +216,41 @@ const Support = () => {
               </div>
               <ul className="bg-[#F7F7F9] max-[429px]:rounded-[20px] rounded-[74px] flex flex-wrap flex-row gap-3 p-[15px] w-fit">
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
+                  <Link href="/home" className="inline-block">
                   <Image src={mailsmall} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Image
-                    src={facebooksmall}
-                    alt="icon"
-                    className="size-[22px]"
-                  />
+                  <Link href="/home" className="inline-block">
+                  <Image src={facebooksmall} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
+                  <Link href="/home" className="inline-block">
                   <Image src={instagram} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
+                  <Link href="/home" className="inline-block">
                   <Image src={tictok} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
+                  <Link href="/home" className="inline-block">
                   <Image src={youtube} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
                 <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
+                  <Link href="/home" className="inline-block">
                   <Image src={vpn} alt="icon" className="size-[22px]" />
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 

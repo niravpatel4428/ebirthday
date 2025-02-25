@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import bg from "@/public/img/price-bg.svg";
-import bgm from "@/public/img/price-bg-mobile.svg";
+import bg from "../../../public/img/price-bg.svg";
+import bgm from "../../../public/img/price-bg-mobile.svg";
 
 const Pricing = () => {
   const [currentPlan, setCurrentPlan] = useState(plans.annual);

@@ -1,42 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import notedown from "@/public/img/notedown.svg";
-import animae from "@/public/img/animae.jpg";
-import animae1 from "@/public/img/animae-big.jpg";
-import success from "@/public/img/mail-green.png";
-import cancle from "@/public/img/mail-cancle-red.png";
-import cross from "@/public/img/cross.svg";
-import connect from "@/public/img/connect.svg";
-import logo from "@/public/img/mobile-center.png";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import notedown from "../../public/img/notedown.svg";
+import animae from "../../public/img/animae.jpg";
+import animae1 from "../../public/img/animae-big.jpg";
+import success from "../../public/img/mail-green.png";
+import cancle from "../../public/img/mail-cancle-red.png";
+import cross from "../../public/img/cross.svg";
+import connect from "../../public/img/connect.svg";
+import logo from "../../public/img/mobile-center.png";
+import DashboardLayout from "../Layouts/DashboardLayout";
 const Varified = () => {
   return (
-    <div>
-    {/* <div className="relative md:rounded-[15px] border border-salte"> */}
-      <div className="flex justify-between md:hidden py-2">
-        <div className="size-10"></div>
-        <div className="w-[65px] h-[58px]">
-          <Image src={logo} alt="img" className="object-contain" />
-        </div>
-        <div className="flex flex-row items-center gap-[7px]">
-          <div className="size-10 md:size-[49px] rounded-full border border-slate flex justify-center items-center hover:bg-slate transition-all duration-500">
-            <Image
-              src={noti}
-              alt="icon"
-              className="object-contain size-[22px] rounded-full"
-            />
-          </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate flex justify-center items-center hover:bg-slate transition-all duration-500">
-            <Image
-              src={animae}
-              alt="icon"
-              className="object-contain size-fit md:size-[44px] rounded-full"
-            />
-          </div>
-        </div>
-      </div>
+    <DashboardLayout>
       <div>
         <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-y border-[#E2E8F0] flex items-center justify-between">
           <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
@@ -126,7 +104,7 @@ const Varified = () => {
               <input
                 type="text"
                 plceholder="Usman Zafar"
-                className="text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
+                className="text-[#64748B] placeholder:text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px]  p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
             <div className="flex flex-col gap-2 date-main">
@@ -196,7 +174,7 @@ const Varified = () => {
           </button>
         </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 

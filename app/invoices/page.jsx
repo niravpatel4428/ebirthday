@@ -2,14 +2,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import search from "@/public/img/search.svg";
-import checked from "@/public/img/checked.svg";
-import download from "@/public/img/download.svg";
-import { Pagination } from "@/app/components/Pagination";
-import more from "@/public/img/more.svg";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import search from "../../public/img/search.svg";
+import checked from "../../public/img/checked.svg";
+import download from "../../public/img/download.svg";
+import { Pagination } from "../components/Pagination";
+import more from "../../public/img/more.svg";
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 const Invoices = () => {
   const [selected, setSelected] = useState([]);
@@ -29,7 +30,7 @@ const Invoices = () => {
     );
   };
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
@@ -64,7 +65,7 @@ const Invoices = () => {
         </div>
       </div>
       {/* invoices */}
-      <div className="relative bg-white border-[#E2E8F0] border-t lg:border lg:rounded-[15px] ">
+      <div className="relative bg-white border-[#E2E8F0]">
         {/* Search part */}
         <div className="p-[22px_16px] md:p-[25px_23px] flex items-center justify-between ">
           <div>
@@ -160,7 +161,7 @@ const Invoices = () => {
                     <Image src={checked} alt="checked" />
                   </span>
                 </label>
-                <span className="text-[#1E293B] text-sm font-normal line-clamp-1">
+                <span className="text-[#1E293B] text-sm font-onest font-normal line-clamp-1">
                   {invoice.name}
                 </span>
               </div>
@@ -175,12 +176,12 @@ const Invoices = () => {
                 </Link>
               </div>
               <div className="w-[20%] pr-1">
-                <span className="text-[#1E293B] text-sm font-normal line-clamp-1">
+                <span className="text-[#1E293B] font-onest text-sm font-normal line-clamp-1">
                   {invoice.date}
                 </span>
               </div>
               <div className="w-[12%] pr-1 overflow-hidden">
-                <span className="text-[#1E293B] text-sm font-normal line-clamp-1">
+                <span className="text-[#1E293B] font-onest text-sm font-normal line-clamp-1">
                   {invoice.price}
                 </span>
               </div>
@@ -288,7 +289,7 @@ const Invoices = () => {
         {/* Pagination */}
         <Pagination />
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 

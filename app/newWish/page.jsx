@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import search from "@/public/img/search.svg";
-import warning from "@/public/img/warning.svg";
-import card from "@/public/img/card-birthday.jpg";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import search from "../../public/img/search.svg";
+import warning from "../../public/img/warning.svg";
+import card from "../../public/img/card-birthday.jpg";
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 const NewWish = () => {
   const cards = [
@@ -18,7 +19,7 @@ const NewWish = () => {
   ];
 
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <ul className="flex flex-row gap-7">
@@ -31,7 +32,7 @@ const NewWish = () => {
         </ul>
         <div className="flex flex-row gap-[13px]">
           <Link
-            href="/"
+            href="/newWish"
             className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex  items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
             <Image
@@ -58,7 +59,7 @@ const NewWish = () => {
         </div>
       </div>
 
-      <div className="relative p-[24px_16px_44px_16px] md:p-[20px_16px_30px_20px] border-t lg:border border-[#E2E8F0]">
+      <div className="relative p-[24px_16px_44px_16px] md:p-[20px_16px_30px_20px] ">
         {/* Birthday celebrant */}
         <div className="flex flex-col gap-2 mb-5">
           <label
@@ -187,15 +188,23 @@ const NewWish = () => {
           </div>
         </div>
         <div className="flex flex-row flex-wrap-reverse justify-end gap-[14px] mt-8 md:mt-16 xl:mt-[99px]">
-          <button className="bg-[#E2E8F0] hover:bg-[#e2e8f0b7] p-[13px_37px] rounded-[50px] text-black font-onest text-base font-bold  max-md:w-full max-md:max-w-[127px] w-fit">
-            Cancel
-          </button>
-          <button className="bg-orange hover:bg-orange/70 text-white p-[13px_37px] rounded-[50px] font-onest text-base font-bold  max-md:w-full max-md:max-w-[256px] w-fit">
-            Make a Wish
-          </button>
+          <Link href="/wishes">
+            <button className="bg-[#E2E8F0] hover:bg-[#e2e8f0b7] p-[13px_37px] rounded-[50px] text-black font-onest text-base font-bold  max-md:w-full max-md:max-w-[127px] w-fit">
+              Cancel
+            </button>
+          </Link>
+
+          <Link
+            href="/wish"
+            className="max-md:w-full max-md:max-w-[256px] w-fit"
+          >
+            <button className="bg-orange hover:bg-orange/70 text-white p-[13px_37px] rounded-[50px] font-onest text-base font-bold  max-md:w-full max-md:max-w-[256px] w-fit">
+              Make a Wish
+            </button>
+          </Link>
         </div>
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 

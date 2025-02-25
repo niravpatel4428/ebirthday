@@ -2,8 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-import slidersvg from "@/public/img/slidersvg.svg";
-import whiteShape from "@/public/img/whiteShape.svg";
+import slidersvg from "../../../public/img/slidersvg.svg";
+import whiteShape from "../../../public/img/whiteShape.svg";
 const Testimonial = () => {
   const settings = {
     className: "center",

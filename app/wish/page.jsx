@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import user from "@/public/img/user.svg";
-import copy from "@/public/img/copy.svg";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import user from "../../public/img/user.svg";
+import copy from "../../public/img/copy.svg";
+import DashboardLayout from "../Layouts/DashboardLayout";
 const Wish = () => {
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <ul className="flex flex-row gap-7">
@@ -28,7 +29,7 @@ const Wish = () => {
               alt="icon"
               className="object-contain size-[18px] md:size-6"
             />
-            <span >Create New Wish</span>
+            <span>Create New Wish</span>
           </Link>
           <div className="size-10 md:size-10 rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
@@ -145,16 +146,20 @@ const Wish = () => {
           </div>
           {/* buttons */}
           <div className="flex flex-row flex-wrap-reverse justify-end gap-[14px] mt-9">
-            <button className="p-[15px_37px] rounded-[50px] bg-[#E2E8F0] hover:bg-[#e2e8f0aa] text-black text-base font-normal transition-all">
-              Cancel
-            </button>
-            <button className="p-[15px_37px] bg-orange hover:bg-orange/70 rounded-[50px] text-white text-base font-normal transition-all">
-              Update Wish
-            </button>
+            <Link href="/wishes">
+              <button className="p-[15px_37px] rounded-[50px] bg-[#E2E8F0] hover:bg-[#e2e8f0aa] text-black text-base font-normal transition-all">
+                Cancel
+              </button>
+            </Link>
+            <Link href="/updatewish">
+              <button className="p-[15px_37px] bg-orange hover:bg-orange/70 rounded-[50px] text-white text-base font-normal transition-all">
+                Update Wish
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 

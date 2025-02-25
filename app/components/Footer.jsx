@@ -1,11 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import footervector from "@/public/img/footervector.svg";
-import footervectormobile from "@/public/img/footervectormobile.svg";
+import footervector from "../../public/img/footervector.svg";
+import footervectormobile from "../../public/img/footervectormobile.svg";
 const Footer = () => {
+  const links = [
+    { label: "Terms of Use", url: "/" },
+    { label: "Refund Policy", url: "/" },
+    { label: "Support", url: "/" },
+  ];
+
   return (
-    <footer  className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
+    <footer className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
       <div className="absolute -top-10 md:-top-20 left-0 right-0 w-full">
         <Image
           src={footervector}
@@ -200,31 +206,20 @@ const Footer = () => {
             <p className="text-white text-base font-onest font-normal tracking-[-0.16px] leading-[141%]">
               @ 2024. All rights reserved.
             </p>
-            <ul className="flex flex-row gap-6 last:after:hidden">
-              <li className="relative block after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden">
-                <Link
-                  href="/"
-                  className="inline-block capitalize relative text-white/80 hover:text-orange text-base font-onest font-normal tracking-[-0.16px] leading-[141%] transition-all duration-500"
+            <ul className="flex flex-wrap flex-row space-x-6 last:after:hidden">
+              {links.map((link, index) => (
+                <li
+                  key={index}
+                  className="relative block after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden"
                 >
-                  Terms of Use
-                </Link>
-              </li>
-              <li className="relative block after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden">
-                <Link
-                  href="/"
-                  className="inline-block capitalize relative text-white/80 hover:text-orange text-base font-onest font-normal tracking-[-0.16px] leading-[141%] transition-all duration-500"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-              <li className="relative block after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden">
-                <Link
-                  href="/"
-                  className="inline-block capitalize relative text-white/80 hover:text-orange text-base font-onest font-normal tracking-[-0.16px] leading-[141%] transition-all duration-500"
-                >
-                  Support
-                </Link>
-              </li>
+                  <Link
+                    href={link.url}
+                    className="inline-block capitalize relative text-white/80 hover:text-orange text-base font-onest font-normal tracking-[-0.16px] leading-[141%] transition-all duration-500"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

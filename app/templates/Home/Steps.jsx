@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import card1 from "@/public/img/card1.svg";
-import card2 from "@/public/img/card2.svg";
-import card3 from "@/public/img/card3.svg";
-import works from "@/public/img/works-top.svg";
-import step1 from "@/public/img/step1.svg";
-import step2 from "@/public/img/step2.svg";
+import card1 from "../../../public/img/card1.svg";
+import card2 from "../../../public/img/card2.svg";
+import card3 from "../../../public/img/card3.svg";
+import works from "../../../public/img/works-top.svg";
+import step1 from "../../../public/img/step1.svg";
+import step2 from "../../../public/img/step2.svg";
 
 const Steps = () => {
   return (

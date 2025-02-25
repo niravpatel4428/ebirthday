@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import celebrateBG from "@/public/img/celebrateBG.svg";
-import cele1 from "@/public/img/cele1.svg";
-import cele2 from "@/public/img/cele2.svg";
+import celebrateBG from "../../../public/img/celebrateBG.svg";
+import cele1 from "../../../public/img/cele1.svg";
+import cele2 from "../../../public/img/cele2.svg";
 const Celebrate = () => {
   return (
     <div className="relative pt-[120px] pb-[155px] md:pt-[96px] md:pb-[187px] bg-[#FBF0CA]">

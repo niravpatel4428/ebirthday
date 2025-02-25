@@ -1,17 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import animae from "@/public/img/animae.jpg";
-import card from "@/public/img/card-birthday.jpg";
-import copy from "@/public/img/copy.svg";
-import more from "@/public/img/more.svg";
-import { Pagination } from "@/app/components/Pagination";
-import search from "@/public/img/search.svg";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import animae from "../../public/img/animae.jpg";
+import card from "../../public/img/card-birthday.jpg";
+import copy from "../../public/img/copy.svg";
+import more from "../../public/img/more.svg";
+import { Pagination } from "../components/Pagination";
+import search from "../../public/img/search.svg";
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 const BirthdayWish = () => {
   return (
-    <>
+    <DashboardLayout>
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t max-md:border-b border-[#E2E8F0] flex items-center justify-between">
         <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
@@ -19,7 +20,7 @@ const BirthdayWish = () => {
         </p>
         <div className="flex flex-row gap-[13px]">
           <Link
-            href="/"
+            href="/newwish"
             className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
             <Image
@@ -124,7 +125,7 @@ const BirthdayWish = () => {
         </div>
         <Pagination />
       </div>
-    </>
+    </DashboardLayout>
   );
 };
 
@@ -140,7 +141,7 @@ const wishes = [
     name: "Sohaib Rumi",
     link: "https://happy-bithday.com",
     price: "$5.00",
-    status: "Inactive",
+    status: "Active",
   },
   {
     name: "Sohaib Rumi",
@@ -164,7 +165,7 @@ const wishes = [
     name: "Sohaib Rumi",
     link: "https://happy-bithday.com",
     price: "$5.00",
-    status: "Inactive",
+    status: "Active",
   },
   {
     name: "Sohaib Rumi",

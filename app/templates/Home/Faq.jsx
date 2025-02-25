@@ -1,8 +1,8 @@
 "use client";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import arrowUP from "@/public/img/arrowUP.svg";
-import React, { useEffect, useRef, useState } from "react";
+import arrowUP from "../../../public/img/arrowUP.svg";
 
 export default function Faq() {
   const faqData = [

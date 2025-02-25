@@ -1,19 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import plus from "@/public/img/plus.svg";
-import noti from "@/public/img/noti.svg";
-import notedown from "@/public/img/notedown.svg";
-import animae from "@/public/img/animae.jpg";
-import animae1 from "@/public/img/animae-big.jpg";
-import success from "@/public/img/mail-green.png";
-import cancle from "@/public/img/mail-cancle-red.png";
-import cross from "@/public/img/cross.svg";
-import connect from "@/public/img/connect.svg";
-import logo from "@/public/img/mobile-center.png";
+import plus from "../../public/img/plus.svg";
+import noti from "../../public/img/noti.svg";
+import notedown from "../../public/img/notedown.svg";
+import animae from "../../public/img/animae.jpg";
+import animae1 from "../../public/img/animae-big.jpg";
+import success from "../../public/img/mail-green.png";
+import cancle from "../../public/img/mail-cancle-red.png";
+import cross from "../../public/img/cross.svg";
+import connect from "../../public/img/connect.svg";
+import logo from "../../public/img/mobile-center.png";
+import DashboardLayout from "../Layouts/DashboardLayout";
 const NotVarified = () => {
   return (
-    <div>
+    <DashboardLayout>
     {/* <div className="relative md:rounded-[15px] border border-salte"> */}
       {/* Header */}
       <div className="flex justify-between md:hidden py-2">
@@ -201,7 +202,7 @@ const NotVarified = () => {
           </button>
         </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 };
 

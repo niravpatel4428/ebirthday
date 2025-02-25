@@ -1,5 +1,5 @@
 import Image from "next/image";
-import arrow from "@/public/img/p-arrow-left.svg";
+import arrow from "../../public/img/p-arrow-left.svg";
 export const Pagination = () => {
   return (
     <>
