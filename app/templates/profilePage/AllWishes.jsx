@@ -52,14 +52,14 @@ const AllWishes = () => {
             />
             Create New Wish
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -68,7 +68,7 @@ const AllWishes = () => {
           </div>
         </div>
       </div>
-      <div className="border border-[#E2E8F0] md:rounded-[10px]">
+      <div className="border-t lg:border border-[#E2E8F0] lg:rounded-[10px]">
         {/* Search part */}
         <div className="p-[22px_16px] md:p-[25px_23px] flex items-center justify-between">
           <div>
@@ -80,7 +80,7 @@ const AllWishes = () => {
               <span className="font-bold text-black">345</span> wishes
             </p>
           </div>
-          <div className="w-full max-w-[380px] relative max-md:hidden">
+          <div className="w-full max-w-[380px] relative max-lg:hidden">
             <input
               type="search"
               name="search"
@@ -94,13 +94,13 @@ const AllWishes = () => {
               className="size-5 absolute top-1/2 -translate-y-1/2 left-4"
             />
           </div>
-          <div className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex md:hidden justify-center items-center">
+          <div className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex lg:hidden justify-center items-center">
             <Image src={search} alt="icon" className="size-5" />
           </div>
         </div>
         {/* table part */}
         {/* Mobile-view */}
-        <div className="flex md:hidden flex-col gap-[17px] px-4 mb-[30px]">
+        <div className="flex lg:hidden flex-col gap-[17px] px-4 mb-[30px]">
           {wishes.map((wish, index) => (
             <div
               key={index}
@@ -161,7 +161,7 @@ const AllWishes = () => {
           ))}
         </div>
         {/* Tablet/Desktop > 768 */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <table className="w-full table-auto ">
             <thead className="bg-[#F1F5F9]">
               <tr className="text-left text-gray-600 text-sm">

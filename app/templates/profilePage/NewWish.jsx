@@ -32,23 +32,23 @@ const NewWish = () => {
         <div className="flex flex-row gap-[13px]">
           <Link
             href="/"
-            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex  items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
             <Image
               src={plus}
               alt="icon"
               className="object-contain size-[18px] md:size-6"
             />
-            Create New Wish
+            <span>Create New Wish</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -58,7 +58,7 @@ const NewWish = () => {
         </div>
       </div>
 
-      <div className="relative p-[24px_16px_44px_16px] md:p-[20px_16px_30px_20px] border-t md:border border-[#E2E8F0]">
+      <div className="relative p-[24px_16px_44px_16px] md:p-[20px_16px_30px_20px] border-t lg:border border-[#E2E8F0]">
         {/* Birthday celebrant */}
         <div className="flex flex-col gap-2 mb-5">
           <label
@@ -109,7 +109,7 @@ const NewWish = () => {
               </span>
             </div>
           </div>
-          <div className="w-full max-w-[46px] md:max-w-[417px] relative border border-[#E2E8F0] rounded-[32px] max-md:size-[46px] max-md:flex max-md:justify-center max-md:items-center">
+          <div className="w-full max-w-[46px] md:max-w-[417px] relative border border-[#E2E8F0] rounded-[32px] max-md:size-[46px] hidden lg:flex lg:justify-center lg:items-center">
             <input
               type="search"
               name="search"
@@ -123,8 +123,11 @@ const NewWish = () => {
               className="size-5 relative  md:absolute md:top-1/2 md:-translate-y-1/2 md:left-4"
             />
           </div>
+          <button className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex lg:hidden justify-center items-center">
+            <Image src={search} alt="icon" className="size-5" />
+          </button>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-4 md:mt-5">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-4 md:mt-5">
           {cards.map((cardData, index) => (
             <div key={index} className="flex flex-col relative">
               <div className="relative w-full h-[196px] md:h-[225px]">

@@ -12,7 +12,9 @@ const ProfileLayout = ({ children }) => {
   return (
     <>
       <div className="p-[10px_10px_148px_0] bg-[#F6F6F9] flex flex-row">
-        <div className="w-full max-w-[237px] block p-[6px_0px] max-lg:hidden">
+
+        {/* Left side part / Sidebar */}
+        <div className="w-full max-w-[237px] block p-[6px_0px] max-md:hidden">
           <Link href="/" className="mb-[38px] inline-block px-5">
             <Image src={logo} alt="icon" className="w-[98px] h-[88px]" />
           </Link>
@@ -58,11 +60,13 @@ const ProfileLayout = ({ children }) => {
             </div>
           </div>
         </div>
-        <section className="w-full md:rounded-[15px] block border border-[#E2E8F0] bg-white">
+
+        {/* right side part */}
+        <section className="w-full md:rounded-[15px] block border border-[#E2E8F0] bg-white h-dvh overflow-y-auto">
           {children}
         </section>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

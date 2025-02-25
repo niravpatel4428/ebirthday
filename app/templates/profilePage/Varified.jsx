@@ -50,14 +50,14 @@ const Varified = () => {
               <Image src={plus} alt="icon" className="object-contain size-6" />
               Create New Wish
             </Link>
-            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
               <Image
                 src={noti}
                 alt="icon"
                 className="object-contain size-[22px] rounded-full"
               />
             </div>
-            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
               <Image
                 src={animae}
                 alt="icon"
@@ -66,6 +66,7 @@ const Varified = () => {
             </div>
           </div>
         </div>
+        {/* Email has been verified */}
         <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
           <div className="flex flex-row items-center gap-[13px] ">
             <Image src={success} alt="icon" className="object-contain size-8" />

@@ -26,27 +26,37 @@ const UpdateWish = () => {
       {/* header */}
       <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-t border-[#E2E8F0] flex items-center justify-between">
         <ul className="flex flex-row gap-7">
-          <li className="relative font-onest font-medium text-[#94A3B8] text-sm md:text-base capiatalize after:absolute after:-right-5 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8]">Birthday  Wishes</li>
-          <li className="relative font-onest font-medium text-[#94A3B8] text-sm md:text-base capiatalize after:absolute after:-right-5 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8]">Wish</li>
-          <li className="relative font-onest font-medium text-black text-sm md:text-base capiatalize after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8] last:after:hidden">Update Wish</li>
+          <li className="relative font-onest font-medium text-[#94A3B8] text-sm md:text-base capiatalize after:absolute after:-right-5 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8]">
+            Birthday Wishes
+          </li>
+          <li className="relative font-onest font-medium text-[#94A3B8] text-sm md:text-base capiatalize after:absolute after:-right-5 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8]">
+            Wish
+          </li>
+          <li className="relative font-onest font-medium text-black text-sm md:text-base capiatalize after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2 after:content-['/'] after:color-[#94A3B8] last:after:hidden">
+            Update Wish
+          </li>
         </ul>
-        
+
         <div className="flex flex-row gap-[13px]">
           <Link
             href="/"
-            className="bg-orange max-md:size-10 max-md:p-0 max-md:justify-center rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+            className="bg-orange max-lg:size-10 max-lg:p-0 max-lg:justify-center rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
-            <Image src={plus} alt="icon" className="object-contain size-[18px] md:size-6" />
-            <span className="max-md:hidden">Birthday  Wishes</span>
+            <Image
+              src={plus}
+              alt="icon"
+              className="object-contain size-[18px] md:size-6"
+            />
+            <span className="max-lg:hidden">Birthday Wishes</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -55,7 +65,7 @@ const UpdateWish = () => {
           </div>
         </div>
       </div>
-      <div className="relative bg-white border border-[#E2E8F0] max-md:border-x-0 max-md:border-b-0 md:rounded-[15px] p-[24px_16px_44px] md:p-[20px_20px_52px]">
+      <div className="relative bg-white border-[#E2E8F0] border-t lg:border lg:rounded-[15px]  p-[24px_16px_44px] md:p-[20px_20px_52px]">
         <div className="flex flex-col gap-5 md:gap-[25px]">
           {/* Birthday celebrant */}
           <div className="flex flex-col gap-2 w-full  ">
@@ -74,7 +84,7 @@ const UpdateWish = () => {
             <p className="text-[#1E293B] text-sm font-onest font-bold">
               Can make public wishes
             </p>
-            <div className="grid md:grid-cols-2 gap-[14px] mt-4">
+            <div className="grid lg:grid-cols-2 gap-[14px] mt-4">
               <div
                 className={`flex justify-between items-center gap-3 p-[14px_17px] border rounded-lg cursor-pointer transition-all ${
                   selected === "private"
@@ -167,7 +177,7 @@ const UpdateWish = () => {
                   </span>
                 </div>
               </div>
-              <div className="w-full max-w-[46px] md:max-w-[417px] relative border border-[#E2E8F0] rounded-[32px] max-md:size-[46px] max-md:flex max-md:justify-center max-md:items-center">
+              <div className="w-full max-w-[46px] md:max-w-[417px] relative border border-[#E2E8F0] rounded-[32px] hidden max-lg:size-[46px] lg:flex lg:justify-center lg:items-center">
                 <input
                   type="search"
                   name="search"
@@ -181,8 +191,11 @@ const UpdateWish = () => {
                   className="size-5 relative  md:absolute md:top-1/2 md:-translate-y-1/2 md:left-4"
                 />
               </div>
+              <button className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex lg:hidden justify-center items-center">
+                <Image src={search} alt="icon" className="size-5" />
+              </button>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-4 md:mt-5">
+            <div className="grid grid-cols-2 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-5 gap-5 mt-4 md:mt-5">
               {cards.map((cardData, index) => (
                 <div key={index} className="flex flex-col relative">
                   <div className="relative w-full h-[196px] md:h-[225px]">

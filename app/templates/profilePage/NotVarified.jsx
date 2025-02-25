@@ -39,6 +39,7 @@ const NotVarified = () => {
       </div>
 
       <div>
+        {/* Desktop header / My Profile */}
         <div className="p-[24px_16px_19px] md:p-[20px] max-md:border-y border-[#E2E8F0] flex items-center justify-between">
           <p className="font-onest font-medium text-black text-base lg:text-lg capiatalize">
             My Profile
@@ -51,14 +52,14 @@ const NotVarified = () => {
               <Image src={plus} alt="icon" className="object-contain size-6" />
               Create New Wish
             </Link>
-            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
               <Image
                 src={noti}
                 alt="icon"
                 className="object-contain size-[22px] rounded-full"
               />
             </div>
-            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+            <div className="size-10 md:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
               <Image
                 src={animae}
                 alt="icon"
@@ -67,6 +68,7 @@ const NotVarified = () => {
             </div>
           </div>
         </div>
+        {/* Email not verified */}
         <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
           <div className="flex flex-row items-center gap-[13px] ">
             <Image src={cancle} alt="icon" className="object-contain size-8" />

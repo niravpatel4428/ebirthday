@@ -38,19 +38,23 @@ const Invoices = () => {
         <div className="flex flex-row gap-[13px]">
           <Link
             href="/"
-            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex justify-center items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
-            <Image src={plus} alt="icon" className="object-contain size-[18px] md:size-6" />
-            Create New Wish
+            <Image
+              src={plus}
+              alt="icon"
+              className="object-contain size-[18px] md:size-6"
+            />
+            <span>Create New Wish</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-10 rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-10 rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -60,7 +64,7 @@ const Invoices = () => {
         </div>
       </div>
       {/* invoices */}
-      <div className="relative bg-white border border-[#E2E8F0] max-md:border-x-0 max-md:border-b-0 md:rounded-[15px] ">
+      <div className="relative bg-white border-[#E2E8F0] border-t lg:border lg:rounded-[15px] ">
         {/* Search part */}
         <div className="p-[22px_16px] md:p-[25px_23px] flex items-center justify-between ">
           <div>
@@ -72,7 +76,7 @@ const Invoices = () => {
               <span className="font-bold text-black">345</span> invoices
             </p>
           </div>
-          <div className="w-full max-w-[380px] relative max-md:hidden">
+          <div className="w-full max-w-[380px] relative max-lg:hidden">
             <input
               type="search"
               name="search"
@@ -86,12 +90,12 @@ const Invoices = () => {
               className="size-5 absolute top-1/2 -translate-y-1/2 left-4"
             />
           </div>
-          <button className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex md:hidden justify-center items-center">
+          <button className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex lg:hidden justify-center items-center">
             <Image src={search} alt="icon" className="size-5" />
           </button>
         </div>
         {/* Table Data >= Desktop */}
-        <div className="w-full mx-auto hidden md:block">
+        <div className="w-full mx-auto hidden lg:block">
           {/* Header */}
           <div className="flex justify-between items-center border-b border-gray-300 bg-gray-100 px-4 py-2 font-medium text-gray-700">
             <div className="w-[20%] pr-1 flex flex-row items-center gap-2 ">
@@ -194,7 +198,7 @@ const Invoices = () => {
           ))}
         </div>
         {/* Table Data >= Mobile */}
-        <div className="flex md:hidden flex-col gap-[15px] px-4 mb-[30px]">
+        <div className="flex lg:hidden flex-col gap-[15px] px-4 mb-[30px]">
           {data.map((item, index) => (
             <div
               key={index}

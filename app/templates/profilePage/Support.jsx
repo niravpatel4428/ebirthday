@@ -38,19 +38,23 @@ const Support = () => {
         <div className="flex flex-row gap-[13px]">
           <Link
             href="/"
-            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex justify-center items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
-            <Image src={plus} alt="icon" className="object-contain size-[18px] md:size-6" />
-            Create New Wish
+            <Image
+              src={plus}
+              alt="icon"
+              className="object-contain size-[18px] md:size-6"
+            />
+            <span>Create New Wish</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -60,7 +64,7 @@ const Support = () => {
         </div>
       </div>
       {/* Support */}
-      <div className="relative p-[20px_16px_44px] md:p-5 bg-white border-t md:border border-[#E2E8F0] md:rounded-[10px]">
+      <div className="relative p-[20px_16px_44px] md:p-5 bg-white border-t lg:border border-[#E2E8F0] lg:rounded-[10px]">
         <div className="grid lg:grid-cols-2 gap-[30px] md:gap-5 xl:gap-[163px]">
           <div className="w-full">
             <h6 className="font-onest text-black font-bold text-xl/none mb-5 md:mb-8">

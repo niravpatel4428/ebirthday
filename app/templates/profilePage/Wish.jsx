@@ -21,23 +21,23 @@ const Wish = () => {
         <div className="flex flex-row gap-[13px]">
           <Link
             href="/"
-            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
+            className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex justify-center items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
             <Image
               src={plus}
               alt="icon"
               className="object-contain size-[18px] md:size-6"
             />
-            Create New Wish
+            <span >Create New Wish</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 md:size-10 rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 md:size-10 rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -47,11 +47,11 @@ const Wish = () => {
         </div>
       </div>
       {/* Wish */}
-      <div className="relative bg-white border border-[#E2E8F0] max-md:border-x-0 max-md:border-b-0 md:rounded-[15px] p-[24px_16px_44px] md:p-[20px_20px_32px]">
+      <div className="relative bg-white border-[#E2E8F0] border-t lg:border lg:rounded-[15px] p-[24px_16px_44px] md:p-[20px_20px_32px]">
         <div className="flex flex-col justify-between ">
           <div>
             {/* input */}
-            <div className="flex flex-col-reverse md:flex-row justify-between gap-5 mb-9">
+            <div className="flex flex-col-reverse lg:flex-row justify-between gap-5 mb-9">
               <div className="flex flex-col gap-2 w-full max-w-[859px]">
                 <p className="text-[#1E293B] text-sm font-onest font-bold">
                   Birthday celebrant
@@ -63,7 +63,7 @@ const Wish = () => {
                 />
               </div>
               {/* check box */}
-              <div className="flex flex-row justify-between items-center gap-3 md:pt-8">
+              <div className="flex flex-row justify-between items-center gap-3 lg:pt-8">
                 <p className="text-black text-sm font-normal font-onest">
                   Make Active
                 </p>
@@ -95,7 +95,7 @@ const Wish = () => {
                 Onemore
               </p>
               {/* Boxes */}
-              <div className="grid sm:grid-cols-2 gap-5 mt-5 md:mt-7">
+              <div className="grid lg:grid-cols-2 gap-5 mt-5 md:mt-7">
                 <div className="rounded-[10px] border border-[#E2E8F0] p-5">
                   <h6 className="text-[#1E293B] text-base md:text-lg font-onest font-semibold">
                     Public Domain

@@ -27,16 +27,16 @@ const BirthdayWish = () => {
               alt="icon"
               className="object-contain size-[18px] md:size-6"
             />
-            Create New Wish
+            <span>Create New Wish</span>
           </Link>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={noti}
               alt="icon"
               className="object-contain size-[22px] rounded-full"
             />
           </div>
-          <div className="size-10 md:size-[49px] rounded-full border border-slate hidden md:flex justify-center items-center hover:bg-slate transition-all duration-500">
+          <div className="size-10 lg:size-[49px] rounded-full border border-slate hidden lg:flex justify-center items-center hover:bg-slate transition-all duration-500">
             <Image
               src={animae}
               alt="icon"
@@ -46,7 +46,7 @@ const BirthdayWish = () => {
         </div>
       </div>
       {/* Search part */}
-      <div className="p-[22px_16px] md:p-[25px_23px] flex items-center justify-between">
+      <div className="p-[22px_16px] lg:p-[25px_23px] flex items-center justify-between">
         <div>
           <h4 className="text-black font-onest text-base font-bold mb-1">
             All wishes
@@ -56,7 +56,7 @@ const BirthdayWish = () => {
             wishes
           </p>
         </div>
-        <div className="w-full max-w-[380px] relative max-md:hidden">
+        <div className="w-full max-w-[380px] relative max-lg:hidden">
           <input
             type="search"
             name="search"
@@ -70,11 +70,11 @@ const BirthdayWish = () => {
             className="size-5 absolute top-1/2 -translate-y-1/2 left-4"
           />
         </div>
-        <div className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex md:hidden justify-center items-center">
+        <div className="border border-[#E2E8F0] outline-none cursor-pointer rounded-full size-[46px] flex lg:hidden justify-center items-center">
           <Image src={search} alt="icon" className="size-5" />
         </div>
       </div>
-      <div className="relative">
+      <div className="relative md:px-4 lg:px-[23px]" >
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[22px] mb-2 md:mb-6">
           {wishes.map((wish, index) => (
             <div
