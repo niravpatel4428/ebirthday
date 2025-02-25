@@ -214,8 +214,10 @@ const wishes = () => {
                         </span>
                       </label>
                     </td>
-                    <td className="p-[18px_8px] border-r border-[#E2E8F0] text-[#1E293B] text-sm font-onest font-normal line-clamp-1">
-                      {wish.name}
+                    <td>
+                      <span className="p-[18px_8px] border-r border-[#E2E8F0] text-[#1E293B] text-sm font-onest font-normal line-clamp-1">
+                        {wish.name}
+                      </span>
                     </td>
                     <td className="p-[18px_8px] border-r border-[#E2E8F0] text-center">
                       <Link
