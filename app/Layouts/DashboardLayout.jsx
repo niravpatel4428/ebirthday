@@ -1,14 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import logo from "../../public/img/sidebar-logo.png";
-import fl from "../../public/img/fl.png";
-import cake from "../../public/img/cake.svg";
-import invoice from "../../public/img/invoice.svg";
-import userline from "../../public/img/userline.svg";
-import support from "../../public/img/support.svg";
-import help from "../../public/img/help.svg";
 import Footer from "../components/Footer";
 import { usePathname } from "next/navigation";
 import MobileHeader from "../components/MobileHeader";

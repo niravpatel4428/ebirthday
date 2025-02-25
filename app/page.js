@@ -13,14 +13,14 @@ import Banner from "./templates/Home/Banner";
 export default function Home() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
     <Banner />
     <Steps/>
     <Pricing/>
     <Celebrate/>
     <Testimonial/>
     <Faq />
-    <Footer/> */}
+    <Footer/>
     </>
   );
 }

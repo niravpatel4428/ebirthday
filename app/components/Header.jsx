@@ -4,21 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import headerLogo from "../../public/img/headerLogo.png";
 // import footervector from "@/public/img/footervector.svg";
+import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "FAQs", href: "#faqs" },
-  { name: "Contact Us", href: "#contact" },
-];
 const navLinksMobile = [
-  { name: "Home", href: "#home" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "FAQs", href: "#faqs" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "#home", },
+  { name: "Pricing", href: "#pricing", },
+  { name: "FAQs", href: "#faqs", },
+  { name: "Contact Us", href: "#contact", },
 ];
 
 const Header = () => {
+  const [navLinks, setNavLinks] = useState([
+    { name: "Home", href: "#home", active: true },
+    { name: "Pricing", href: "#pricing", active: false },
+    { name: "FAQs", href: "#faqs", active: false },
+    { name: "Contact Us", href: "#contact", active: false },
+  ]);
+  const router = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const toggleCollapse = () => {
@@ -45,9 +47,19 @@ const Header = () => {
     }
   }, [isCollapsed]);
 
+  const handleClick = (index) => {
+    setNavLinks((prevLinks) =>
+      prevLinks.map((link, i) => ({
+        ...link,
+        active: i === index, // Set only the clicked link as active
+      }))
+    );
+  };
   return (
     <header
-      className={`border-b border-[#05123c1a] sticky top-0 z-50 bg-white ${ isSticky ? "!sticky top-0 shadow-md" : "" } transition-all duration-500`}
+      className={`border-b border-[#05123c1a] sticky top-0 z-50 bg-white ${
+        isSticky ? "!sticky top-0 shadow-md" : ""
+      } transition-all duration-500`}
     >
       <div className="container">
         <div className="flex justify-between items-center w-full h-[60px] md:h-20">
@@ -71,7 +83,9 @@ const Header = () => {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px]"
+                    onClick={() => handleClick(index)}
+                    className={`transition-all duration-500 p-[12px_14px] xl:p-[12px_20px] text-black text-base font-normal font-outfit capitalize hover:bg-[#0996ba1a] rounded-[12px] 
+                      ${link.active ? "!bg-[#0996ba1a]" : ""}`}
                   >
                     {link.name}
                   </Link>
