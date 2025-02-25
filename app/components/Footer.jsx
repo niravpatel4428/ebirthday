@@ -10,6 +10,7 @@ const Footer = () => {
     { label: "Support", url: "/" },
   ];
 
+
   return (
     <footer className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
       <div className="absolute -top-10 md:-top-20 left-0 right-0 w-full">

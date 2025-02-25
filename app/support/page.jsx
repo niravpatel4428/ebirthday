@@ -18,6 +18,15 @@ import youtube from "../../public/img/youtube.svg";
 import vpn from "../../public/img/vpn.svg";
 
 const Support = () => {
+  const socialMediaLinks = [
+    { src: mailsmall, alt: "Mail", href: "/" },
+    { src: facebooksmall, alt: "Facebook", href: "/" },
+    { src: instagram, alt: "Instagram", href: "/" },
+    { src: tictok, alt: "TikTok", href: "/" },
+    { src: youtube, alt: "YouTube", href: "/" },
+    { src: vpn, alt: "VPN", href: "/" },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Select an option");
   const toggleDropdown = () => {
@@ -215,36 +224,20 @@ const Support = () => {
                 </div>
               </div>
               <ul className="bg-[#F7F7F9] max-[429px]:rounded-[20px] rounded-[74px] flex flex-wrap flex-row gap-3 p-[15px] w-fit">
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={mailsmall} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={facebooksmall} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={instagram} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={tictok} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={youtube} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
-                <li className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center">
-                  <Link href="/home" className="inline-block">
-                  <Image src={vpn} alt="icon" className="size-[22px]" />
-                  </Link>
-                </li>
+                {socialMediaLinks.map((social, index) => (
+                  <li
+                    key={index}
+                    className="bg-white hover:bg-[#F6F6F9] border border-transparent hover:border-[#FFF] rounded-[50px] size-[50px] flex justify-center items-center"
+                  >
+                    <Link href={social.href} className="inline-block">
+                      <Image
+                        src={social.src}
+                        alt="icon"
+                        className="size-[22px]"
+                      />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
