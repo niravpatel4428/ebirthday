@@ -46,9 +46,9 @@ const MobileHeader = ({ setIsCollapsed }) => {
           </button>
         </div>
 
-        <div className="w-[65px] h-[58px] absolute top-[5px] left-1/2 -translate-x-1/2">
+       <Link href="/" className="w-[65px] h-[58px] absolute top-[5px] left-1/2 -translate-x-1/2">
           <Image src={logo} alt="icon" className="w-full h-full" />
-        </div>
+        </Link>
 
         <div className="flex gap-2 ">
           <Link href="/profile" className="size-10 rounded-full border border-slate flex justify-center items-center hover:bg-slate transition-all duration-500">

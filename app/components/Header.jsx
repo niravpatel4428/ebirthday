@@ -122,7 +122,7 @@ const Header = () => {
                   isCollapsed
                     ? "rotate-45 top-[0.10rem] duration-500"
                     : "duration-500"
-                } relative w-[14px] h-[2px] rounded-md bg-orange block max-[390px]:mb-[0.30rem] mb-1`}
+                } relative w-[14px] h-[2px] rounded-md bg-orange block max-[390px]:mb-[0.20rem] mb-1`}
               ></span>
               <span
                 className={`${

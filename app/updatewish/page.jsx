@@ -66,7 +66,7 @@ const UpdateWish = () => {
           </div>
         </div>
       </div>
-      <div className="relative bg-white border-[#E2E8F0] border-t lg:border lg:rounded-[15px]  p-[24px_16px_44px] md:p-[20px_20px_52px]">
+      <div className="relative bg-white border-[#E2E8F0] border-t p-[24px_16px_44px] md:p-[20px_20px_52px]">
         <div className="flex flex-col gap-5 md:gap-[25px]">
           {/* Birthday celebrant */}
           <div className="flex flex-col gap-2 w-full  ">

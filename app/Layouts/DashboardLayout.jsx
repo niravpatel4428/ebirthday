@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }) => {
   const router = usePathname();
   return (
     <>
-      <div className="max-lg:p-[0_0_80_0] p-[10px_10px_160px_0] bg-[#F6F6F9] flex flex-row">
+      <div className="max-md:p-[0_0_80px_0] max-lg:p-[0_0_130px_0] p-[10px_10px_160px_0] bg-[#F6F6F9] flex flex-row">
         {/* Left side part / Sidebar */}
         <Sidebar isCollapsed={isCollapsed} />
         {/* right side part */}

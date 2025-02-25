@@ -94,11 +94,12 @@ body {
 
 @keyframes rotate-effect {
   0% { transform: rotate(0deg); }
-  50% { transform: rotate(10deg); }
+  50% { transform: rotate(30deg); -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); -ms-transform: rotate(30deg); -o-transform: rotate(30deg); }
   100% { transform: rotate(0deg); }
 }
 .animate-rotate {
   animation: rotate-effect 3s infinite ease-in-out;
+  -webkit-animation: rotate-effect 3s infinite ease-in-out;
 }
 
 @keyframes pulse-custom {
@@ -107,6 +108,7 @@ body {
 }
 .animate-pulse-custom {
   animation: pulse-custom 1.5s infinite ease-in-out;
+  -webkit-animation: pulse-custom 1.5s infinite ease-in-out;
 }
 
 @keyframes twinkle {

@@ -223,7 +223,7 @@ const Support = () => {
                   </div>
                 </div>
               </div>
-              <ul className="bg-[#F7F7F9] max-[429px]:rounded-[20px] rounded-[74px] flex flex-wrap flex-row gap-3 p-[15px] w-fit">
+              <ul className="bg-[#F7F7F9] max-[429px]:rounded-[20px] rounded-[40px] md:rounded-[20px] xl:rounded-[74px] flex flex-wrap flex-row gap-3 p-[15px] w-fit">
                 {socialMediaLinks.map((social, index) => (
                   <li
                     key={index}

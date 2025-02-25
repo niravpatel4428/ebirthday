@@ -117,7 +117,7 @@ const Varified = () => {
               <input
                 type="date"
                 plceholder=""
-                className="text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
+                className="text-[#64748B] w-full text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
             <div className="flex flex-col gap-2">

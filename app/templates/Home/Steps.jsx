@@ -117,7 +117,7 @@ const Steps = () => {
                       />
                     </form>
                     <div className="flex justify-center">
-                      <button className="bg-orange rounded-xl text-white text-base font-semibold font-outfit p-[10px_57px] hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500">
+                      <button className="bg-orange rounded-xl text-white text-base font-semibold border border-transparent font-outfit p-[10px_57px] hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500">
                         Share Page
                       </button>
                     </div>
@@ -152,7 +152,7 @@ const Steps = () => {
                       className="object-contain size-20"
                     />
                   </div>
-                  <button className="bg-orange w-full text-center mt-[10px] rounded-xl text-white text-base font-semibold font-outfit p-[10px_20px] hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500">
+                  <button className="bg-orange w-full text-center mt-[10px] rounded-xl text-white text-base font-semibold border border-transparent font-outfit p-[10px_20px] hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500">
                     Save
                   </button>
                 </div>
