@@ -34,7 +34,7 @@ const Sidebar = ({ isCollapsed }) => {
           className={`pl-[10px] flex flex-col gap-1 pb-12 mb-12 border-b border-[#CBD5E1] `}
         >
           <Link
-            href="/wishes"
+            href="/birthdayWish"
             className={`flex flex-row items-center w-full max-w-[199px] gap-[7px] py-2 border border-transparent rounded-lg group hover:bg-white hover:border-[#CBD5E1] px-[10px] ${
               router === "/wishes" || router === "/newWish"
                 ? "!bg-white !border-[#CBD5E1] !text-black "
