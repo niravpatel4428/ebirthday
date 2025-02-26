@@ -63,6 +63,28 @@ const Varified = () => {
             className="object-contain size-[18px] cursor-pointer"
           />
         </div>
+        {/* Email not verified */}
+        <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
+          <div className="flex flex-row items-center gap-[13px] ">
+            <Image src={cancle} alt="icon" className="object-contain size-8" />
+            <div>
+              <p className="text-black text-sm font-semibold !leading-tight">
+                Email not verified
+              </p>
+              <span className="text-black/80 text-xs font-normal !leading-tight">
+                Your account is not verified and now is locked to create wishes.{" "}
+                <Link href="/" className="font-bold !leading-none underline">
+                  Click here to verify
+                </Link>
+              </span>
+            </div>
+          </div>
+          <Image
+            src={cross}
+            alt="icon"
+            className="object-contain size-[18px] cursor-pointer"
+          />
+        </div>
         {/* profile picture */}
         <div className="relative p-[20px_16px_0] md:p-[26px_30px_0]">
           <h4 className="font-onest font-semibold text-[#64748B] text-sm uppercase mb-4">
@@ -75,16 +97,16 @@ const Varified = () => {
               className="object-cover size-[138px]"
             />
             <div>
-              <div className="bg-[#F1F5F9] border w-fit border-slate rounded-[10px] p-[12px_14px] flex flex-row gap-[6px]">
+              <button className="bg-[#F1F5F9] outline-none border w-fit border-slate rounded-[10px]  max-[350px]:p-[10px_10px] p-[12px_14px] flex flex-row gap-[6px]">
                 <Image
                   src={notedown}
                   alt="img"
                   className="object-contain w-[17px] h-[17px]"
                 />
-                <p className="text-black text-sm font-medium font-onest">
+                <p className="text-black max-[350px]:text-xs text-sm font-medium font-onest">
                   Change Picture
                 </p>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -103,7 +125,7 @@ const Varified = () => {
               </label>
               <input
                 type="text"
-                plceholder="Usman Zafar"
+                placeholder="Usman Zafar"
                 className="text-[#64748B] placeholder:text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px]  p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
@@ -116,7 +138,7 @@ const Varified = () => {
               </label>
               <input
                 type="date"
-                plceholder=""
+                placeholder=""
                 className="text-[#64748B] w-full text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
@@ -129,7 +151,7 @@ const Varified = () => {
               </label>
               <input
                 type="email"
-                plceholder="demo@gmail.com"
+                placeholder="demo@gmail.com"
                 className="text-[#64748B] placeholder:text-[#64748B] text-sm md:text-base font-normal font-onest rounded-[10px] bg-white p-[15px_20px] md:p-[15px_25px] border border-[#E2E8F0] outline-none"
               />
             </div>
@@ -156,7 +178,7 @@ const Varified = () => {
                 <Image
                   src={connect}
                   alt="connect"
-                  className="object-contain size-[19px] group-hover:contrast-[12.5 ]"
+                  className="object-contain size-[19px] group-hover:contrast-[12.5] transition-all duration-500"
                 />
               </button>
             </div>

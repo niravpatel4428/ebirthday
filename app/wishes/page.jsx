@@ -118,7 +118,7 @@ const wishes = () => {
                           onChange={() => toggleSelect(index)}
                           checked={selected.includes(index)}
                         />
-                        <span className="absolute text-white opacity-0 rounded-md peer-checked:opacity-100 h-[18px] w-[20px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span className="absolute text-white opacity-0 rounded-md peer-checked:opacity-100 h-full w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                           <Image src={checked} alt="checked" />
                         </span>
                       </label>
