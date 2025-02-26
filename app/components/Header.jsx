@@ -7,18 +7,20 @@ import headerLogo from "../../public/img/headerLogo.png";
 import { usePathname } from "next/navigation";
 
 const navLinksMobile = [
-  { name: "Home", href: "#home", },
-  { name: "Pricing", href: "#pricing", },
+  { name: "Home", href: "/" },
+  { name: "Pricing", href: "/" },
+  { name: "Privacy-Policy", href: "/privacy" },
+  { name: "Contact Us", href: "/contact" },
   // { name: "FAQs", href: "#faqs", },
-  { name: "Contact Us", href: "#contact", },
 ];
 
 const Header = () => {
   const [navLinks, setNavLinks] = useState([
-    { name: "Home", href: "#home", active: true },
-    { name: "Pricing", href: "#pricing", active: false },
+    { name: "Home", href: "/", active: true },
+    { name: "Pricing", href: "/", active: false },
+    { name: "Privacy-Policy", href: "/privacy", active: false },
+    { name: "Contact Us", href: "/contact", active: false },
     // { name: "FAQs", href: "#faqs", active: false },
-    { name: "Contact Us", href: "#contact", active: false },
   ]);
   const router = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -78,7 +80,7 @@ const Header = () => {
 
           {/* big screen links */}
           <div className={`hidden lg:block`}>
-            <ul className="flex flex-row items-center gap-5 xl:gap-6">
+            <ul className="flex flex-row items-center gap-2 xl:gap-6">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link

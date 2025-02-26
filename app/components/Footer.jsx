@@ -5,7 +5,7 @@ import footervector from "../../public/img/footervector.svg";
 import footervectormobile from "../../public/img/footervectormobile.svg";
 const Footer = () => {
   const links = [
-    { label: "Terms of Use", url: "/" },
+    { label: "Terms of Use", url: "/terms" },
     { label: "Refund Policy", url: "/" },
     { label: "Support", url: "/" },
     { label: "Privacy Policy", url: "/privacy" },
