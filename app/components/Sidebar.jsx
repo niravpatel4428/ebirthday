@@ -2,8 +2,9 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/img/sidebar-logo.png";
+// import logo from "../../public/img/sidebar-logo.png";
 import fl from "../../public/img/fl.png";
+import logo from "../../public/img/logo.png";
 import cake from "../../public/img/cake.svg";
 import invoice from "../../public/img/invoice.svg";
 import userline from "../../public/img/userline.svg";
