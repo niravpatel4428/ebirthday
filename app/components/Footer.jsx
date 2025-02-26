@@ -8,8 +8,31 @@ const Footer = () => {
     { label: "Terms of Use", url: "/" },
     { label: "Refund Policy", url: "/" },
     { label: "Support", url: "/" },
+    { label: "Privacy Policy", url: "/privacy" },
   ];
 
+  const socialLinks = [
+    {
+      href: "/",
+      imgSrc: "/img/x.svg",
+      alt: "x",
+    },
+    {
+      href: "/",
+      imgSrc: "/img/facebook.svg",
+      alt: "facebook",
+    },
+    {
+      href: "/",
+      imgSrc: "/img/pintres.svg",
+      alt: "pintres",
+    },
+    {
+      href: "/",
+      imgSrc: "/img/insta.svg",
+      alt: "insta",
+    },
+  ];
 
   return (
     <footer className="relative bg-blue pt-10 pb-10 xl:pb-[24px] ">
@@ -44,58 +67,22 @@ const Footer = () => {
                   do eiusmod tempor incididunt ut labore{" "}
                 </p>
                 <div className="flex flx-row gap-4 mt-6">
-                  <Link
-                    href="/"
-                    target="/"
-                    className="size-[45px] flex justify-center items-center rounded-full bg-[#19254c] group"
-                  >
-                    <Image
-                      src="/img/x.svg"
-                      alt="x"
-                      width={21}
-                      height={21}
-                      className="object-contain size-[21px] group-hover:brightness-50 transition-all duration-500"
-                    />
-                  </Link>
-                  <Link
-                    href="/"
-                    target="/"
-                    className="size-[45px] flex justify-center items-center rounded-full bg-[#19254c] group"
-                  >
-                    <Image
-                      src="/img/facebook.svg"
-                      alt="facebook"
-                      width={21}
-                      height={21}
-                      className="object-contain size-[21px] group-hover:brightness-50 transition-all duration-500"
-                    />
-                  </Link>
-                  <Link
-                    href="/"
-                    target="/"
-                    className="size-[45px] flex justify-center items-center rounded-full bg-[#19254c] group"
-                  >
-                    <Image
-                      src="/img/pintres.svg"
-                      alt="pintres"
-                      width={21}
-                      height={21}
-                      className="object-contain size-[21px] group-hover:brightness-50 transition-all duration-500"
-                    />
-                  </Link>
-                  <Link
-                    href="/"
-                    target="/"
-                    className="size-[45px] flex justify-center items-center rounded-full bg-[#19254c] group"
-                  >
-                    <Image
-                      src="/img/insta.svg"
-                      alt="insta"
-                      width={21}
-                      height={21}
-                      className="object-contain size-[21px] group-hover:brightness-50 transition-all duration-500"
-                    />
-                  </Link>
+                  {socialLinks.map((social, index) => (
+                    <Link
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      className="w-[45px] h-[45px] flex justify-center items-center rounded-full bg-[#19254c] group"
+                    >
+                      <Image
+                        src={social.imgSrc}
+                        alt={social.alt}
+                        width={21}
+                        height={21}
+                        className="object-contain w-[21px] h-[21px] group-hover:brightness-50 transition-all duration-500"
+                      />
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>

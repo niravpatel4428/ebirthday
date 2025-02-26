@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const navLinksMobile = [
   { name: "Home", href: "#home", },
   { name: "Pricing", href: "#pricing", },
-  { name: "FAQs", href: "#faqs", },
+  // { name: "FAQs", href: "#faqs", },
   { name: "Contact Us", href: "#contact", },
 ];
 
@@ -17,7 +17,7 @@ const Header = () => {
   const [navLinks, setNavLinks] = useState([
     { name: "Home", href: "#home", active: true },
     { name: "Pricing", href: "#pricing", active: false },
-    { name: "FAQs", href: "#faqs", active: false },
+    // { name: "FAQs", href: "#faqs", active: false },
     { name: "Contact Us", href: "#contact", active: false },
   ]);
   const router = usePathname();
