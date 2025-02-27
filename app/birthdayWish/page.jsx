@@ -20,7 +20,7 @@ const BirthdayWish = () => {
         </p>
         <div className="flex flex-row gap-[13px]">
           <Link
-            href="/newwish"
+            href="/newWish"
             className="bg-orange rounded-[42px] p-[9px_14px_9px_11px] text-white text-xs md:text-sm !leading-none font-onest font-bold inline-flex items-center gap-[5px] hover:bg-orange/70 transition-all duration-500"
           >
             <Image
