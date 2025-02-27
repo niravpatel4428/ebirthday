@@ -75,7 +75,8 @@ const BirthdayWish = () => {
           <Image src={search} alt="icon" className="size-5" />
         </div>
       </div>
-      <div className="relative md:px-4 lg:px-[23px]" >
+      {/* cards */}
+      <div className="relative md:px-4 lg:px-[23px]">
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-[22px] mb-2 md:mb-6">
           {wishes.map((wish, index) => (
             <div

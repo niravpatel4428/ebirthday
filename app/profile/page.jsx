@@ -6,12 +6,12 @@ import noti from "../../public/img/noti.svg";
 import notedown from "../../public/img/notedown.svg";
 import animae from "../../public/img/animae.jpg";
 import animae1 from "../../public/img/animae-big.jpg";
-import success from "../../public/img/mail-green.png";
 import cancle from "../../public/img/mail-cancle-red.png";
 import cross from "../../public/img/cross.svg";
 import connect from "../../public/img/connect.svg";
-import logo from "../../public/img/mobile-center.png";
 import DashboardLayout from "../Layouts/DashboardLayout";
+import { Varifiedc } from "../components/Varifiedc";
+import { UnVarifiedc } from "../components/UnVarifiedc";
 const Varified = () => {
   return (
     <DashboardLayout>
@@ -45,46 +45,9 @@ const Varified = () => {
           </div>
         </div>
         {/* Email has been verified */}
-        <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
-          <div className="flex flex-row items-center gap-[13px] ">
-            <Image src={success} alt="icon" className="object-contain size-8" />
-            <div>
-              <p className="text-black text-sm font-semibold !leading-tight">
-                Email has been verified
-              </p>
-              <span className="text-black/80 text-xs font-normal !leading-tight">
-                Your account is now unlocked to create wishes
-              </span>
-            </div>
-          </div>
-          <Image
-            src={cross}
-            alt="icon"
-            className="object-contain size-[18px] cursor-pointer"
-          />
-        </div>
+        <Varifiedc />
         {/* Email not verified */}
-        <div className="bg-slate p-[9px_16px] md:p-[10px_12px_10px_2 2px] font-onest flex justify-between items-center gap-5">
-          <div className="flex flex-row items-center gap-[13px] ">
-            <Image src={cancle} alt="icon" className="object-contain size-8" />
-            <div>
-              <p className="text-black text-sm font-semibold !leading-tight">
-                Email not verified
-              </p>
-              <span className="text-black/80 text-xs font-normal !leading-tight">
-                Your account is not verified and now is locked to create wishes.{" "}
-                <Link href="/" className="font-bold !leading-none underline">
-                  Click here to verify
-                </Link>
-              </span>
-            </div>
-          </div>
-          <Image
-            src={cross}
-            alt="icon"
-            className="object-contain size-[18px] cursor-pointer"
-          />
-        </div>
+        <UnVarifiedc />
         {/* profile picture */}
         <div className="relative p-[20px_16px_0] md:p-[26px_30px_0]">
           <h4 className="font-onest font-semibold text-[#64748B] text-sm uppercase mb-4">
