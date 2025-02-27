@@ -17,7 +17,7 @@ const Celebrate = () => {
           </h3>
           <div className="mt-[30px]">
             <Link
-              href="/"
+              href="/signup"
               className="p-[16px_21px] font-outfit text-white text-base font-semibold bg-orange border border-transparent rounded-2xl hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
             >
               Create Your Page Now

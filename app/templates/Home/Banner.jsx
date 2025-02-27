@@ -40,7 +40,7 @@ const Banner = () => {
         {/* Button */}
         <div className="mt-10 lg:mt-7 mb-10 lg:mb-[60px] flex justify-center">
           <Link
-            href="/"
+            href="/signup"
             className="p-[14px_20px] lg:p-[16px_21px] font-outfit text-white text-base font-semibold bg-orange border border-transparent rounded-2xl hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
           >
             Create Your Page Now

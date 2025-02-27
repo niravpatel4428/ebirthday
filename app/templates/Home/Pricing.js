@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import bg from "../../../public/img/price-bg.svg";
 import bgm from "../../../public/img/price-bg-mobile.svg";
+import Link from "next/link";
 
 const Pricing = () => {
   const [currentPlan, setCurrentPlan] = useState(plans.annual);
@@ -24,10 +25,21 @@ const Pricing = () => {
     }
   };
   return (
-    <div id="pricing" className="relative bg-[#CBE8F0] pt-[60px] pb-11 md:pb-[160px]">
+    <div
+      id="pricing"
+      className="relative bg-[#CBE8F0] pt-[60px] pb-11 md:pb-[160px]"
+    >
       <div className="absolute -top-5 md:-top-9 left-0 right-0">
-      <Image src={bg} alt="image" className="w-full h-full object-cover hidden min-h-52 md:block" />
-      <Image src={bgm} alt="image" className="w-full h-full  object-cover block md:hidden" />
+        <Image
+          src={bg}
+          alt="image"
+          className="w-full h-full object-cover hidden min-h-52 md:block"
+        />
+        <Image
+          src={bgm}
+          alt="image"
+          className="w-full h-full  object-cover block md:hidden"
+        />
       </div>
       <div className="container">
         <div className="relative z-10">
@@ -104,9 +116,12 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="bg-orange hover:bg-transparent hover:text-orange border border-orange p-[16px] font-onest text-sm leading-[90%] text-white font-bold rounded-[10px] w-full">
+                  <Link
+                    href="/signup"
+                    className="bg-orange hover:bg-transparent hover:text-orange border border-orange p-[16px] font-onest text-sm leading-[90%] text-white font-bold rounded-[10px] text-center block w-full"
+                  >
                     Create a Page
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="absolute -top-5 left-auto right-[22px] md:left-[149px]">
@@ -179,9 +194,12 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="bg-orange hover:bg-transparent hover:text-orange border border-orange p-[16px] font-onest text-sm leading-[90%] text-white font-bold rounded-[10px] w-full">
-                    Create a Page
-                  </button>
+                    <Link
+                      href="/signup"
+                      className="bg-orange hover:bg-transparent hover:text-orange border border-orange p-[16px] font-onest text-sm leading-[90%] text-white font-bold rounded-[10px] text-center block w-full"
+                    >
+                      Create a Page
+                    </Link>
                 </div>
               </div>
             </div>

@@ -95,7 +95,7 @@ const Footer = () => {
                   <ul className="space-y-[10px] md:space-y-5 mt-3 md:mt-6 w-fit">
                     <li>
                       <Link
-                        href="#home"
+                        href="/"
                         className="text-white hover:text-orange hover:underline transition-all duration-500   text-sm md:text-base font-onest font-normal tracking-[-0.16px] leading-[141%] flex flex-row gap-3 items-center"
                       >
                         Home
@@ -103,7 +103,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="#pricing"
+                        href="/"
                         className="text-white hover:text-orange hover:underline transition-all duration-500   text-sm md:text-base font-onest font-normal tracking-[-0.16px] leading-[141%] flex flex-row gap-3 items-center"
                       >
                         Pricing
@@ -111,15 +111,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="#faqs"
-                        className="text-white hover:text-orange hover:underline transition-all duration-500   text-sm md:text-base font-onest font-normal tracking-[-0.16px] leading-[141%] flex flex-row gap-3 items-center"
-                      >
-                        FAQs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="#contact"
+                        href="/contact"
                         className="text-white hover:text-orange hover:underline transition-all duration-500   text-sm md:text-base font-onest font-normal tracking-[-0.16px] leading-[141%] flex flex-row gap-3 items-center"
                       >
                         Contact Us

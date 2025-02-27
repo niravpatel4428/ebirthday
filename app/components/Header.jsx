@@ -99,13 +99,13 @@ const Header = () => {
           {/* btn-group */}
           <div className="hidden lg:flex gap-4">
             <Link
-              href="/"
+              href="/signup"
               className="text-black text-base font-normal font-outfit p-[10px_30px] xl:p-[11px_30px] rounded-xl border border-[#1e1e1e80] bg-transparent hover:bg-[#1e1e1e] hover:text-white transition-all duration-500"
             >
               Sign up
             </Link>
             <Link
-              href="/"
+              href="/signin"
               className="text-white text-base font-normal font-outfit p-[10px_34px] xl:p-[11px_34px] rounded-xl border border-transparent bg-orange hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
             >
               Sign in
@@ -168,7 +168,7 @@ const Header = () => {
 
                 <li className="mt-3 mb-3">
                   <Link
-                    href="/"
+                    href="/signup"
                     className="text-black text-base font-normal font-outfit p-[10px_30px] xl:p-[14px_30px] rounded-xl border border-[#1e1e1e80] bg-transparent hover:bg-[#1e1e1e] hover:text-white transition-all duration-500"
                   >
                     Sign up
@@ -176,7 +176,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/signin"
                     className="text-white text-base font-normal font-outfit p-[10px_34px] xl:p-[14px_34px] rounded-xl border border-transparent bg-orange hover:bg-transparent hover:border-orange hover:text-orange transition-all duration-500"
                   >
                     Sign in
