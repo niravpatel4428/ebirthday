@@ -18,7 +18,7 @@ const Privacypolicy = () => {
                 <h1 className="text-blue text-[32px] md:text-4xl lg:text-[42px] xl:text-[45px] font-fredoka font-semibold mb-5 md:mb-7">
                   Privacy Policy
                 </h1>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   At{" "}
                   <Link
                     href="happy-ebirthday.com"
@@ -52,17 +52,17 @@ const Privacypolicy = () => {
             <Image
               src={bannerPink}
               alt="bannerPink"
-              className="object-contain w-[66px] absolute bottom-2 right-[8%] md:right-[24.5%] animate-pulse-custom "
+              className="object-contain w-[66px] absolute bottom-2 right-[8%] md:right-[24.5%] max-md:hidden animate-pulse-custom "
             />
           </div>
 
           <div className="relative pt-14 md:pt-28">
             <div className="container">
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Information We Collect
                 </h2>
-                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   <li className="mb-4">
                     <div className="flex flex-col space-y-2">
                       <p className="font-semibold text-blue">
@@ -90,11 +90,11 @@ const Privacypolicy = () => {
                 </ul>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   How We Use Your Information
                 </h2>
-                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   <li className="mb-4">
                     <div className="flex flex-col space-y-2">
                       <p className="font-semibold text-blue">
@@ -132,11 +132,11 @@ const Privacypolicy = () => {
                 </ul>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Disclosure of Your Information
                 </h2>
-                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <ul className="list-disc pl-6 text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   <li className="mb-4">
                     <div className="flex flex-col space-y-2">
                       <p className="font-semibold text-blue">
@@ -166,11 +166,11 @@ const Privacypolicy = () => {
                 </ul>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Data Security
                 </h2>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   We implement reasonable security measures to protect your
                   personal information from unauthorized access, use, or
                   disclosure. However, no method of transmission over the
@@ -179,11 +179,11 @@ const Privacypolicy = () => {
                 </p>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Your Rights
                 </h2>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   Depending on your location, you may have the right to access,
                   correct, or delete your personal information. If you wish to
                   exercise these rights, please contact us using the information
@@ -191,11 +191,11 @@ const Privacypolicy = () => {
                 </p>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Cookies and Tracking Technologies
                 </h2>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   Our website may use cookies and similar tracking technologies
                   to enhance your experience. You can choose to accept or
                   decline cookies through your browser settings. However,
@@ -204,11 +204,11 @@ const Privacypolicy = () => {
                 </p>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Changes to This Privacy Policy
                 </h2>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   We may update this Privacy Policy from time to time. We will
                   notify you of any changes by posting the new Privacy Policy on
                   our website. Your continued use of the services after any
@@ -218,11 +218,11 @@ const Privacypolicy = () => {
                 </p>
               </div>
 
-              <div>
+              <div className="mb-5 md:mb-7 lg:mb-12">
                 <h2 className="font-fredoka font-semibold text-xl lg:text-2xl tracking-[-0.24px] text-blue mb-3">
                   Contact Us
                 </h2>
-                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] mb-6 md:mb-8">
+                <p className="text-blue/70 text-base lg:text-[18px] font-onest font-medium leading-[155%] ">
                   If you have any questions about this Privacy Policy or our
                   data practices, please contact us at{" "}
                   <Link

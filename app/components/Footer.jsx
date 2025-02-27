@@ -6,8 +6,8 @@ import footervectormobile from "../../public/img/footervectormobile.svg";
 const Footer = () => {
   const links = [
     { label: "Terms of Use", url: "/terms" },
-    { label: "Refund Policy", url: "/" },
-    { label: "Support", url: "/" },
+    { label: "Refund Policy", url: "/refund" },
+    { label: "Support", url: "/support" },
     { label: "Privacy Policy", url: "/privacy" },
   ];
 
@@ -176,21 +176,22 @@ const Footer = () => {
                   Be The First One To Get Latest Updates{" "}
                   <br className="max-md:hidden block" /> And Stay Connected
                 </p>
-                <button className="w-full capitalize text-white text-base font-onest font-semibold text-center rounded-[80px] bg-orange hover:bg-orange/70 transition-all duration-500 p-[14px_25px]">
+                <button className="w-full capitalize text-white text-base font-onest font-semibold text-center rounded-[80px] border border-orange  bg-orange hover:bg-transparent hover:text-orange transition-all duration-500 p-[14px_25px]">
+
                   Subscribe Now
                 </button>
               </div>
             </div>
           </div>
-          <div className="flex max-md:flex-col gap-3 justify-between items-center max-md:text-center pt-6">
-            <p className="text-white text-base font-onest font-normal tracking-[-0.16px] leading-[141%]">
+          <div className="flex max-sm:flex-col-reverse max-md:flex-col gap-3 justify-between items-center max-md:text-center pt-6">
+            <p className="text-white text-base font-onest font-normal tracking-[-0.16px] leading-[141%] max-sm:pt-3 max-sm:border-t max-sm:border-white">
               @ 2024. All rights reserved.
             </p>
-            <ul className="flex flex-wrap flex-row space-x-6 last:after:hidden">
+            <ul className="flex max-sm:flex-col flex-wrap flex-row max-sm:space-y-2 sm:space-x-6 last:after:hidden">
               {links.map((link, index) => (
                 <li
                   key={index}
-                  className="relative block after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden"
+                  className="relative block max-sm:after:hidden after:absolute after:content-['] after:bg-white/80 after:w-1 after:h-1 after:rounded-full after:top-1/2 after:-translate-y-1/2 after:-right-[13px] last:after:hidden"
                 >
                   <Link
                     href={link.url}
