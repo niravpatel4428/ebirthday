@@ -10,7 +10,7 @@ import more from "../../public/img/more.svg";
 import checked from "../../public/img/checked.svg";
 import { Pagination } from "../components/Pagination";
 import DashboardLayout from "../Layouts/DashboardLayout";
-const wishes = () => {
+const Wishes = () => {
   const [selected, setSelected] = useState([]);
   const wishes = new Array(8).fill({
     name: "Sohaib Rumi",
@@ -254,4 +254,4 @@ const wishes = () => {
   );
 };
 
-export default wishes;
+export default Wishes;
