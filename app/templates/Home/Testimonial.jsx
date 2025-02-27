@@ -77,7 +77,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="relative pt-9 md:pt-2 pb-[10px] lg:pb-[60px]">
+    <div className="relative pt-9 md:pt-2 pb-[10px] lg:pb-[60px] testimonial-wrapper">
       <div className="absolute -top-4 md:top-[-53px] left-0 right-0">
         <Image src={whiteShape} alt="shape" className="w-full" />
       </div>
@@ -91,7 +91,7 @@ const Testimonial = () => {
         </h4>
       </div>
 
-      <div className="slider-container relative z-10 pb-24 overflow-hidden">
+      <div className="slider-container-testimonial relative z-10 pb-24 overflow-hidden">
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
             <div
